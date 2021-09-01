@@ -28,7 +28,7 @@
 #define _LOGOS_RETURN_RETAINED
 #endif
 
-@class SKUIURL; @class SUWebViewController; @class SUStoreController; 
+@class SUWebViewController; @class SKUIURL; @class SUStoreController; 
 static id (*_logos_orig$_ungrouped$SUStoreController$handleApplicationURL$)(_LOGOS_SELF_TYPE_NORMAL SUStoreController* _LOGOS_SELF_CONST, SEL, NSURL *); static id _logos_method$_ungrouped$SUStoreController$handleApplicationURL$(_LOGOS_SELF_TYPE_NORMAL SUStoreController* _LOGOS_SELF_CONST, SEL, NSURL *); static id (*_logos_orig$_ungrouped$SUStoreController$_handleAccountURL$)(_LOGOS_SELF_TYPE_NORMAL SUStoreController* _LOGOS_SELF_CONST, SEL, NSURL *); static id _logos_method$_ungrouped$SUStoreController$_handleAccountURL$(_LOGOS_SELF_TYPE_NORMAL SUStoreController* _LOGOS_SELF_CONST, SEL, NSURL *); static SKUIURL* (*_logos_orig$_ungrouped$SKUIURL$initWithUrl$)(_LOGOS_SELF_TYPE_INIT SKUIURL*, SEL, NSURL *) _LOGOS_RETURN_RETAINED; static SKUIURL* _logos_method$_ungrouped$SKUIURL$initWithUrl$(_LOGOS_SELF_TYPE_INIT SKUIURL*, SEL, NSURL *) _LOGOS_RETURN_RETAINED; static id (*_logos_orig$_ungrouped$SUWebViewController$_prepareToLoadURL$)(_LOGOS_SELF_TYPE_NORMAL SUWebViewController* _LOGOS_SELF_CONST, SEL, NSURL *); static id _logos_method$_ungrouped$SUWebViewController$_prepareToLoadURL$(_LOGOS_SELF_TYPE_NORMAL SUWebViewController* _LOGOS_SELF_CONST, SEL, NSURL *); 
 
 #line 9 "/Users/tihmstar/dev/itmsBlock/itmsBlock/itmsBlock.xm"
