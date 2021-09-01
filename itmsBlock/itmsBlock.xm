@@ -28,3 +28,12 @@
 }
 
 %end
+
+%hook SUWebViewController
+
+-(id)_prepareToLoadURL:(NSURL *)url{
+    if ([[url absoluteString] hasPrefix:@"itms"] || [[url absoluteString] hasPrefix:@"data"]) return nil;
+    return %orig;
+}
+
+%end
