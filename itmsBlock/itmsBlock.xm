@@ -6,34 +6,22 @@
 
 #import <UIKit/UIKit.h>
 
-%hook SUStoreController
-
--(id)handleApplicationURL:(NSURL *)url{
-    if ([[url absoluteString] hasPrefix:@"itms"]) return nil;
-	return %orig;
-}
-
--(id)_handleAccountURL:(NSURL *)url{
-    if ([[url absoluteString] hasPrefix:@"itms"]) return nil;
-    return %orig;
-}
-
-%end
-
-%hook SKUIURL
-
--(id)initWithUrl:(NSURL *)url{
-    if ([[url absoluteString] hasPrefix:@"itms"]) return nil;
-    return %orig;
-}
-
-%end
+/*
+    Hook suggested by @pattern_F_
+ */
 
 %hook SUWebViewController
 
--(id)_prepareToLoadURL:(NSURL *)url{
-    if ([[url absoluteString] hasPrefix:@"itms"] || [[url absoluteString] hasPrefix:@"data"]) return nil;
-    return %orig;
+-(void)_loadURLRequest:(id)req{
+    if (req) {
+        NSURL *url = [req URL];
+        if ([[url absoluteString] hasPrefix:@"data:"]) {
+            %orig(nil);
+            return;
+        }
+    }
+    %orig;
 }
 
 %end
+
